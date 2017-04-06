@@ -6,5 +6,7 @@ Route::controller('auth', 'Front\AuthController');
 Route::controller('test', 'TestController');
 
 Route::group(['middleware' => ['auth.carwash']], function () {
-    Route::get('carwash/cabinet', 'Carwash\CabinetController@getIndex');
+    Route::controller('carwash/cabinet', 'Carwash\CabinetController');
+    Route::controller('carwash/price', 'Carwash\PriceController');
+    Route::controller('carwash/reserve', 'Carwash\ReserveController');
 });

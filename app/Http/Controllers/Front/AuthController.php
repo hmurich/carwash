@@ -49,7 +49,7 @@ class AuthController extends Controller{
         $car_wash->address = $request->input('address');
         $car_wash->save();
 
-        return redirect()->action('Front\CabinetController@getLogin')->with('success', 'Вы успешно зарегистрированы. Войдите используя Ваш Email,пароль.');
+        return redirect()->action('Front\AuthController@getLogin')->with('success', 'Вы успешно зарегистрированы. Войдите используя Ваш Email,пароль.');
     }
 
 }
