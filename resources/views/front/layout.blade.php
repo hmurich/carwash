@@ -12,26 +12,22 @@
 
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/bootstrap.min.css') }}" >
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/1-col-portfolio.css') }}" >
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/my.css') }}" >
 </head>
 
-<body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        @include('include.menu')
-    </nav>
+<body style='padding-top: 5px;'>
 
     <!-- Page Content -->
     <div class="container">
-
+        <div class='row' style="text-align: center;">
+            <a href='/'>
+                <img src="/img/logo.png" style='max-height: 76px;' />
+            </a>
+        </div>
         @include('include.message')
 
         @yield('content')
 
-        <hr>
-        <footer>
-            @include('include.footer')
-        </footer>
     </div>
 
     <script src="{{ URL::asset('js/jquery.js') }}"></script>

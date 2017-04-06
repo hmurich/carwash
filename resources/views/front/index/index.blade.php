@@ -5,7 +5,9 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <a href='#asd' type="button" class="btn btn-success btn-lg btn-block">Войти/Зарегистрироваться</a>
+        <a href='{{ action("Front\AuthController@getLogin") }}' type="button" class="btn btn-primary btn-lg btn-block">
+            Войти/Зарегистрироваться
+        </a>
     </div>
 </div>
 
