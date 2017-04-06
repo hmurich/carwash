@@ -21,6 +21,20 @@
             <strong>Адресс:</strong>
             {{ $car_wash->address }}
         </h6>
+        @if ($car_wash->relPrice)
+            <h6>
+                <strong>Цена за легковую:</strong>
+                {{ $car_wash->relPrice->price_small }}
+            </h6>
+            <h6>
+                <strong>Цена за кроссовер:</strong>
+                {{ $car_wash->relPrice->price_mega }}
+            </h6>
+            <h6>
+                <strong>Цена за внедорожник:</strong>
+                {{ $car_wash->relPrice->price_big }}
+            </h6>
+        @endif
         <h6>
             <strong>Рэйтинг:</strong>
             {{ $car_wash->raiting }}

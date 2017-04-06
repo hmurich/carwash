@@ -35,6 +35,20 @@
                 <strong>Адресс:</strong>
                 {{ $i->address }}
             </h6>
+            @if ($i->relPrice)
+                <h6>
+                    <strong>Цена за легковую:</strong>
+                    {{ $i->relPrice->price_small }}
+                </h6>
+                <h6>
+                    <strong>Цена за кроссовер:</strong>
+                    {{ $i->relPrice->price_mega }}
+                </h6>
+                <h6>
+                    <strong>Цена за внедорожник:</strong>
+                    {{ $i->relPrice->price_big }}
+                </h6>
+            @endif
             <h6>
                 <strong>Рэйтинг:</strong>
                 {{ $i->raiting }}

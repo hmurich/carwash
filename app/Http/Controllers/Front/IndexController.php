@@ -6,7 +6,7 @@ use App\Model\CarWashe;
 
 class IndexController extends Controller{
     function getIndex(){
-        $items = CarWashe::orderBy('id', 'desc')->get();
+        $items = CarWashe::orderBy('id', 'desc')->with('relPrice')->get();
 
         $ar = array();
         $ar['title'] = 'Автомойки Астаны';
