@@ -18,7 +18,7 @@
             </div>
             <div class="form-group">
                 <label for="phone">Телефон</label>
-                <input type="text" name='phone' class="form-control" id="phone" placeholder="Наименование" required="" value="{{ $car_wash->phone }}">
+                <input type="tel" name='phone' class="form-control" id="phone" placeholder="Наименование" required="" value="{{ $car_wash->phone }}">
             </div>
             <div class="form-group">
                 <label for="address">Адрес</label>

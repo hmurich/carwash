@@ -26,7 +26,7 @@
             </div>
             <div class="form-group">
                 <label for="phone">Телефон</label>
-                <input type="text" name='phone' class="form-control" id="phone" placeholder="Наименование" required="">
+                <input type="tel" name='phone' class="form-control" id="phone" placeholder="Наименование" required="">
             </div>
             <div class="form-group">
                 <label for="address">Адрес</label>
