@@ -40,7 +40,7 @@
                 {{ $i->raiting }}
             </h6>
             <p>{{ $i->note }}</p>
-            <a class="btn btn-primary" href="#">
+            <a class="btn btn-primary btn-block" href="{{ action("Front\CarWashController@getShow", $i->id) }}">
                 Зайти <span class="glyphicon glyphicon-chevron-right"></span>
             </a>
         </div>

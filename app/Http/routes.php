@@ -1,6 +1,7 @@
 <?php
 Route::get('/', 'Front\IndexController@getIndex');
 Route::controller('auth', 'Front\AuthController');
+Route::controller('item', 'Front\CarWashController');
 
 // Test Controllers
 Route::controller('test', 'TestController');

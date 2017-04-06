@@ -10,6 +10,10 @@ use App\Model\Generators\ModelSnipet;
 
 class AuthController extends Controller{
     function getLogin(){
+        $user = Auth::user();
+        if ($user)
+            return redirect()->action('Carwash\CabinetController@getIndex');
+            
         $ar = array();
         $ar['title'] = 'Войти';
 
