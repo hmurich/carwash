@@ -39,6 +39,19 @@ class PriceController extends Controller{
         $price->price_small = $request->input('price_small');
         $price->price_mega = $request->input('price_mega');
         $price->price_big = $request->input('price_big');
+
+        $price->price_small_1 = $request->input('price_small_1');
+        $price->price_small_2 = $request->input('price_small_2');
+        $price->price_small_3 = $request->input('price_small_3');
+
+        $price->price_mega_1 = $request->input('price_mega_1');
+        $price->price_mega_2 = $request->input('price_mega_2');
+        $price->price_mega_3 = $request->input('price_mega_3');
+
+        $price->price_big_1 = $request->input('price_big_1');
+        $price->price_big_2 = $request->input('price_big_2');
+        $price->price_big_3 = $request->input('price_big_3');
+
         $price->save();
 
         return redirect()->back()->with('success', 'Сохранено.');

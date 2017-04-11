@@ -21,20 +21,6 @@
             <strong>Адресс:</strong>
             {{ $car_wash->address }}
         </h6>
-        @if ($car_wash->relPrice)
-            <h6>
-                <strong>Цена за легковую:</strong>
-                {{ $car_wash->relPrice->price_small }}
-            </h6>
-            <h6>
-                <strong>Цена за кроссовер:</strong>
-                {{ $car_wash->relPrice->price_mega }}
-            </h6>
-            <h6>
-                <strong>Цена за внедорожник:</strong>
-                {{ $car_wash->relPrice->price_big }}
-            </h6>
-        @endif
         <h6>
             <strong>Рэйтинг:</strong>
             {{ $car_wash->raiting }}
@@ -44,6 +30,48 @@
             Позвонить
         </a>
     </div>
+    @if ($car_wash->relPrice)
+        <div class="col-md-12">
+            <table class="table table-bordered" style="    margin-top: 15px;">
+                <tr>
+                    <th style="font-size: 70%; padding: 3px; text-align: center;">Кузов/Салон</th>
+                    <th style="font-size: 70%; padding: 3px; text-align: center;">Кузов</th>
+                    <th style="font-size: 70%; padding: 3px; text-align: center;">Салон</th>
+                    <th style="font-size: 70%; padding: 3px; text-align: center;">Багаж.</th>
+                </tr>
+
+                <tr>
+                    <td colspan="4" style="text-align: center; font-weight: 600;">Цены за легковую</td>
+                </td>
+                <tr>
+                    <td>{{ $car_wash->relPrice->price_small }}</td>
+                    <td>{{ $car_wash->relPrice->price_small_1 }}</td>
+                    <td>{{ $car_wash->relPrice->price_small_2 }}</td>
+                    <td>{{ $car_wash->relPrice->price_small_3 }}</td>
+                </tr>
+
+                <tr>
+                    <td colspan="4" style="text-align: center; font-weight: 600;">Цены за кроссовер</td>
+                </td>
+                <tr>
+                    <td>{{ $car_wash->relPrice->price_mega }}</td>
+                    <td>{{ $car_wash->relPrice->price_mega_1 }}</td>
+                    <td>{{ $car_wash->relPrice->price_mega_2 }}</td>
+                    <td>{{ $car_wash->relPrice->price_mega_3 }}</td>
+                </tr>
+
+                <tr>
+                    <td colspan="4" style="text-align: center; font-weight: 600;">Цены за внедорожник</td>
+                </td>
+                <tr>
+                    <td>{{ $car_wash->relPrice->price_big }}</td>
+                    <td>{{ $car_wash->relPrice->price_big_1 }}</td>
+                    <td>{{ $car_wash->relPrice->price_big_2 }}</td>
+                    <td>{{ $car_wash->relPrice->price_big_3 }}</td>
+                </tr>
+            </table>
+        </div>
+    @endif
 </div>
 
 <br />
